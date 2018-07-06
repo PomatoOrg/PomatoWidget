@@ -18,6 +18,7 @@
 		C417D5C320EF21CA00ED9047 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		C417D5C620EF21CA00ED9047 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		C417D5C820EF21CA00ED9047 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C417D67E20EF434700ED9047 /* PomatoWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PomatoWidget.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +53,7 @@
 		C417D5C220EF21CA00ED9047 /* PomatoWidget */ = {
 			isa = PBXGroup;
 			children = (
+				C417D67E20EF434700ED9047 /* PomatoWidget.entitlements */,
 				C417D5C320EF21CA00ED9047 /* TodayViewController.swift */,
 				C417D5C520EF21CA00ED9047 /* MainInterface.storyboard */,
 				C417D5C820EF21CA00ED9047 /* Info.plist */,
@@ -91,6 +93,11 @@
 				TargetAttributes = {
 					C417D5BD20EF21CA00ED9047 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -263,6 +270,7 @@
 		C417D5CA20EF21CA00ED9047 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PomatoWidget/PomatoWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y8S5729BQ2;
 				INFOPLIST_FILE = PomatoWidget/Info.plist;
@@ -283,6 +291,7 @@
 		C417D5CB20EF21CA00ED9047 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PomatoWidget/PomatoWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y8S5729BQ2;
 				INFOPLIST_FILE = PomatoWidget/Info.plist;
