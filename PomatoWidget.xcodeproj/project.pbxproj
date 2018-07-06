@@ -10,6 +10,7 @@
 		C417D5C120EF21CA00ED9047 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C417D5C020EF21CA00ED9047 /* NotificationCenter.framework */; };
 		C417D5C420EF21CA00ED9047 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C417D5C320EF21CA00ED9047 /* TodayViewController.swift */; };
 		C417D5C720EF21CA00ED9047 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C417D5C520EF21CA00ED9047 /* MainInterface.storyboard */; };
+		C417D68020EF538300ED9047 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C417D67F20EF538200ED9047 /* SnapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		C417D5C620EF21CA00ED9047 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		C417D5C820EF21CA00ED9047 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C417D67E20EF434700ED9047 /* PomatoWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PomatoWidget.entitlements; sourceTree = "<group>"; };
+		C417D67F20EF538200ED9047 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C417D68020EF538300ED9047 /* SnapKit.framework in Frameworks */,
 				C417D5C120EF21CA00ED9047 /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,6 +48,7 @@
 		C417D5BF20EF21CA00ED9047 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C417D67F20EF538200ED9047 /* SnapKit.framework */,
 				C417D5C020EF21CA00ED9047 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
@@ -71,6 +75,7 @@
 				C417D5BA20EF21CA00ED9047 /* Sources */,
 				C417D5BB20EF21CA00ED9047 /* Frameworks */,
 				C417D5BC20EF21CA00ED9047 /* Resources */,
+				C417D68120EF53EB00ED9047 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -129,6 +134,25 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C417D68120EF53EB00ED9047 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+			);
+			name = "Run Script";
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C417D5BA20EF21CA00ED9047 /* Sources */ = {
@@ -273,6 +297,10 @@
 				CODE_SIGN_ENTITLEMENTS = PomatoWidget/PomatoWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y8S5729BQ2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PomatoWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -294,6 +322,10 @@
 				CODE_SIGN_ENTITLEMENTS = PomatoWidget/PomatoWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y8S5729BQ2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PomatoWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
